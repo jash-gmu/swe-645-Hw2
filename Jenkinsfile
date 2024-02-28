@@ -24,7 +24,7 @@ pipeline {
                 script {
                     // Set DOCKER_BUILDKIT environment variable to enable BuildKit
                    
-                    dockerImage = docker.build registry:${env.BUILD_NUMBER}
+                    dockerImage = docker.build registry
                     // Use Docker Buildx to build the Docker image
                     
                 }
