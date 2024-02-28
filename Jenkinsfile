@@ -6,7 +6,7 @@ pipeline {
         DOCKER_IMAGE_NAME = 'jashwanthraj/webapp'
         registry='jashwanthraj/webapp'
         DOCKER_REGISTRY_CREDENTIALS = 'docker' 
-        BUILD_TIMESTAMP = sh(script: 'date +%Y%m%d%H%M%S', returnStdout: true).trim()
+         KUBECONFIG = '/home/Jenkins/.kube/config'
     }
 
     stages {
