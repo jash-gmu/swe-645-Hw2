@@ -14,7 +14,7 @@ pipeline {
                 script {
                     checkout scm
                     sh 'rm -rf *.war'
-                    sh 'jar -cvf student.war -c webapp/ .' 
+                    sh 'jar -cvf student.war -C webapp/ .' 
                 }
             }
         }
