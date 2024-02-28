@@ -16,7 +16,7 @@ pipeline {
                     sh 'rm -rf /docker/*.war'
                     dir('/webapp') {
                         // Create WAR file at a specific location
-                        sh 'jar cf /docker/student.war *'
+                        sh 'jar cvf /docker/student.war *'
                     }
                 }
             }
