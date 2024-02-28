@@ -4,6 +4,7 @@ pipeline {
     environment {
         DOCKERFILE_PATH = 'docker/Dockerfile'
         DOCKER_IMAGE_NAME = 'jashwanthraj/webapp'
+        registry='jashwanthraj/webapp'
         DOCKER_REGISTRY_CREDENTIALS = 'docker' 
         BUILD_TIMESTAMP = sh(script: 'date +%Y%m%d%H%M%S', returnStdout: true).trim()
     }
@@ -23,7 +24,7 @@ pipeline {
                 script {
                     // Set DOCKER_BUILDKIT environment variable to enable BuildKit
                    
-                    sh "docker build -t ${DOCKER_IMAGE_NAME}:${env.BUILD_NUMBER} -f ${DOCKERFILE_PATH} ."
+                    dockerImage = docker.build registry:${env.BUILD_NUMBER}
                     // Use Docker Buildx to build the Docker image
                     
                 }
