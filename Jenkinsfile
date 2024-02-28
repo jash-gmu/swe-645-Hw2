@@ -15,7 +15,7 @@ pipeline {
                 script {
                     checkout scm
                     sh 'rm -rf *.war'
-                    sh 'jar -cvf docker/student.war -C webapp/ .' 
+                    sh 'jar -cvf student.war -C webapp/ .' 
                 }
             }
         }
@@ -23,9 +23,7 @@ pipeline {
             steps {
                 script {
                     // Set DOCKER_BUILDKIT environment variable to enable BuildKit
-                    dir('docker/'){
-                        def customImage =docker.build(DOCKER_IMAGE_NAME:env.BUILD_NUMBER)
-                    }
+                    def customImage =docker.build("${DOCKER_IMAGE_NAME}:${env.BUILD_NUMBER}")
                         
                     
                 }
