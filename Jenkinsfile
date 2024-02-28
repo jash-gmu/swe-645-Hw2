@@ -25,7 +25,7 @@ pipeline {
                    
 
                     // Use Docker Buildx to build the Docker image
-                    sh "docker buildx build --tag ${DOCKER_IMAGE_NAME}:${env.BUILD_NUMBER} -f ${DOCKERFILE_PATH} ."
+                    sh "docker buildx build --tag ${DOCKER_IMAGE_NAME}:${env.BUILD_NUMBER} --file ${DOCKERFILE_PATH} ."
                 }
             }
         }
