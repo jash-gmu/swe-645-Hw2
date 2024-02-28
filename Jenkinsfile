@@ -41,14 +41,14 @@ pipeline {
         stage ("Deploying Image as a Single Node to Rancher") {
             steps {
                 script {
-                    sh 'kubectl set image deployment/student-deployment student=${DOCKER_IMAGE_NAME}:${env.BUILD_NUMBER} -n jenkins pipeline'
+                    sh 'kubectl set image deployment/student-deployment student-deployment=${DOCKER_IMAGE_NAME}:${env.BUILD_NUMBER} -n jenkins pipeline'
                 }
             }
         }
         stage("Deploying Load Balancer in Rancher") {
             steps {
                 script {
-                    sh 'kubectl set image deployment/student-deployment-lb student=${DOCKER_IMAGE_NAME}:${env.BUILD_NUMBER} -n jenkins pipeline'
+                    sh 'kubectl set image deployment/student-deployment-lb student-deployment-lb=${DOCKER_IMAGE_NAME}:${env.BUILD_NUMBER} -n jenkins pipeline'
                 }
             }
         }
