@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #a9a3a3;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #3396a7;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="date"] {
+            width: 50%;
+        }
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Survey Form</h1>
+    <form action="#" method="post">
+        <label for="first_name">First Name *</label><br>
+        <input type="text" id="first_name" name="first_name" required><br>
+
+        <label for="last_name">Last Name *</label><br>
+        <input type="text" id="last_name" name="last_name" required><br>
+
+        <label for="street_address">Street Address *</label><br>
+        <input type="text" id="street_address" name="street_address" required><br>
+
+        <label for="city">City *</label><br>
+        <input type="text" id="city" name="city" required><br>
+
+        <label for="state">State *</label><br>
+        <input type="text" id="state" name="state" required><br>
+
+        <label for="zip">Zip *</label><br>
+        <input type="text" id="zip" name="zip" required><br>
+
+        <label for="telephone">Telephone Number *</label><br>
+        <input type="tel" id="telephone" name="telephone" required><br>
+
+        <label for="email">Email *</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="date_of_survey">Date of Survey *</label><br>
+        <input type="date" id="date_of_survey" name="date_of_survey" required><br>
+
+        <label>What did you like most about the campus? </label><br>
+        <input type="checkbox" id="like_students" name="like_students">Students<br>
+        <input type="checkbox" id="like_location" name="like_location">Location<br>
+        <input type="checkbox" id="like_campus" name="like_campus">Campus<br>
+        <input type="checkbox" id="like_atmosphere" name="like_atmosphere">Atmosphere<br>
+        <input type="checkbox" id="like_dorm_rooms" name="like_dorm_rooms">Dorm Rooms<br>
+        <input type="checkbox" id="like_sports" name="like_sports">Sports<br>
+
+        <label>How did you become interested in the university? </label><br>
+        <input type="radio" id="interest_friends" name="interest" value="friends">Friends<br>
+        <input type="radio" id="interest_television" name="interest" value="television">Television<br>
+        <input type="radio" id="interest_internet" name="interest" value="internet">Internet<br>
+        <input type="radio" id="interest_other" name="interest" value="other">Other<br>
+
+        <label for="recommend_likelihood">Likelihood of recommending this school </label><br>
+        <select id="recommend_likelihood" name="recommend_likelihood">
+            <option value="Very Likely">Very Likely</option>
+            <option value="Likely">Likely</option>
+            <option value="Unlikely">Unlikely</option>
+        </select><br>
+
+        <label for="raffle">Raffle (Enter at least ten comma separated numbers ranging from 1 through 100) </label><br>
+        <input type="text" id="raffle" name="raffle" required><br>
+
+        <label for="additional_comments">Additional Comments</label><br>
+        <textarea id="additional_comments" name="additional_comments" rows="4" cols="50"></textarea><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Cancel">
+    </form>
+</body>
+</html>
