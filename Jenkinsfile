@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKERFILE_PATH = '/docker/Dockerfile'
+        DOCKERFILE_PATH = 'docker/Dockerfile'
         DOCKER_IMAGE_NAME = 'jashwanthraj/webapp'
         DOCKER_REGISTRY_CREDENTIALS = 'docker' 
         BUILD_TIMESTAMP = sh(script: 'date +%Y%m%d%H%M%S', returnStdout: true).trim()
