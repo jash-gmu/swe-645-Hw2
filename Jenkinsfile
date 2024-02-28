@@ -42,8 +42,7 @@ pipeline {
             steps {
                 script {
                     sh"kubectl config current-context"
-                     sh 'kubectl set image deployment/deploy container-0=${DOCKER_IMAGE_NAME}:${env.BUILD_NUMBER}'
-
+                    sh "kubectl set image deployment/deploy container-0=${DOCKER_IMAGE_NAME}:${env.BUILD_NUMBER} "
                 }
             }
         }
