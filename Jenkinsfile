@@ -41,7 +41,7 @@ pipeline {
         stage ("Deploying Image as a Single Node to Rancher") {
             steps {
                 script {
-                    sh "kubectl set image deployment/student-deployment student=${DOCKER_IMAGE_NAME}:${env.BUILD_NUMBER} -n jenkins"
+                    sh "kubectl set image deployment/student-deployment student-deployment=${DOCKER_IMAGE_NAME}:${env.BUILD_NUMBER} -n jenkins"
 
                 }
             }
