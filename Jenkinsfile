@@ -13,11 +13,8 @@ pipeline {
             steps {
                 script {
                     checkout scm
-                    sh 'rm -rf /docker/*.war'
-                    dir('/webapp') {
-                        // Create WAR file at a specific location
-                        sh 'jar cvf /docker/student.war *'
-                    }
+                    sh 'rm -rf *.war'
+                    sh 'jar -cvf student.war -c webapp/ .' 
                 }
             }
         }
