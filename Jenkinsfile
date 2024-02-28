@@ -22,10 +22,10 @@ pipeline {
             steps {
                 script {
                     // Set DOCKER_BUILDKIT environment variable to enable BuildKit
-                    sh 'export DOCKER_BUILDKIT=1'
+                   
 
                     // Use Docker Buildx to build the Docker image
-                    sh "docker build -t ${DOCKER_IMAGE_NAME}:${env.BUILD_NUMBER} -f ${DOCKERFILE_PATH} ."
+                    sh "docker buildx build -t ${DOCKER_IMAGE_NAME}:${env.BUILD_NUMBER} -f ${DOCKERFILE_PATH} ."
                 }
             }
         }
