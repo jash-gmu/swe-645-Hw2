@@ -41,6 +41,7 @@ pipeline {
         stage ("Deploying Image as a Single Node to Rancher") {
             steps {
                 script {
+                    sh"kubectl config current-context"
                     sh "kubectl set image deployment/deploy container-0=${DOCKER_IMAGE_NAME}:${env.BUILD_NUMBER} "
 
                 }
