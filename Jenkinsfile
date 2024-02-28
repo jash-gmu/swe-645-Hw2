@@ -23,7 +23,7 @@ pipeline {
                 script {
                     // Set DOCKER_BUILDKIT environment variable to enable BuildKit
                    
-                    def customImage=docker.build("${DOCKER_IMAGE_NAME}:${env.BUILD_NUMBER}")
+                    sh "docker build -t ${DOCKER_IMAGE_NAME}:${env.BUILD_NUMBER} -f ${DOCKERFILE_PATH} ."
                     // Use Docker Buildx to build the Docker image
                     
                 }
