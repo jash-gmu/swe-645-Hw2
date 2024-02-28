@@ -23,9 +23,10 @@ pipeline {
             steps {
                 script {
                     // Set DOCKER_BUILDKIT environment variable to enable BuildKit
-                   
-                    dockerImage = docker.build registry
-                    // Use Docker Buildx to build the Docker image
+                    dir('docker/'){
+                        def customImage =docker.build(DOCKER_IMAGE_NAME:env.BUILD_NUMBER)
+                    }
+                        
                     
                 }
             }
