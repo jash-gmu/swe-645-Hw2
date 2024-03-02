@@ -1,123 +1,127 @@
 <!DOCTYPE html>
-<html>
-  <html lang="en"></html>
-  <head>
-    <title>My Resume</title>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-    <h1>Jashwanth Raj Gowlikar</h1>
-    <img src="./profile.jpeg" alt="Jashwanth Raj Gowlikar" style="width:300px;height:400px;">
-    <hr>
-    <a href="http://107.23.219.159/"><h2>Student Survey Link</h2></a>
-    <h2>Summary</h2>
-    <p>As a diligent college student, I'm eager to find employment that would allow me to contribute my diverse range of powerful skills. With a motivated attitude, I'm fully committed to utilizing my abilities to advance the goals of the company. Among my strengths are my capacity to quickly learn new software and tasks, my persistence in personal and professional growth, my ability to work collaboratively with teams, my willingness to take the initiative to improve processes, and my talent for building strong rapport and relationships. I am confident that my skills and dedication would make me a valuable asset to any organization.</p>
-    <hr>
-    <h2>Education</h2>
-    <h3>George Mason University, Fairfax, Virginia </h3>
-    <p>Master of Science in Computer Science, August 2022 - May2024</p>
-    <h4>Relevant Courses:</h4> 
-    <p>Analysis of Algorithms, Database Management Systems, Machine Learning, Theory and Applications of Data Mining, Software Testing, Software Design and Architecture, Pattern Recognition and Machine Learning, Software engineering for Real Time Embedded Systems.</p>
-    <h3>Jawaharlal Nehru Technological University Hyderabad , Hyderabad, India.</h3>
-    <p>Bachelor of Technology in Computer Science, August 2017 - May 2021</p>
-    <h4>Relevant Courses:</h4>
-    <p>Python Programming, Database Management Systems, Intro to Artificial Intelligence, Data Structures and
-        Algorithms, C Programming, Operating Systems, Cloud Computing, Data Communication and Computer Networks, Data
-        Analytics</p>
-    <hr>
-    <h2>Experience</h2>
-    <h3>Tata Consultancy Services, Hyderabad, India</h3>
-    <h4>Assistant system Engineer - Full time(Jan 2022 - Jul 2022)</h4>
-    <ul>
-        <li>Actively engaged in agile environments, contributing to code reviews through confluence, troubleshooting and Critical thinking.
-            Demonstrated ability to ensure security measures, maintain code quality, and adhere to project timelines.</li>
-        <li>Hands on experience in design, code, and test inspections throughout the Software Development life cycle to identify issues and
-            defects.</li>
-        <li>Trained in Confluence, Jira, Jenkins, Java, Python adherence to software development practices.</li>
-    </ul>
-    <hr>
-    <h2>Academic Projects</h2>
-    <h3>Customer Loyalty Application Using Android Studio.</h3>
-    <ul>
-        <li>Developed a user-friendly Android Application using Java in Android Studio, serving as a seamless interface for customers
-            of Retailer. The application provided access to various services offered by the company, enhancing customer experience and
-            convenience.</li>
-        <li>Designed and implemented a robust SQL database to store information of 20 families and 50 Customers along with the
-            transactional data between the Customers and Retailer</li>
-        <li>Utilized Java Servlets and JFrame to establish a secure and efficient connection between the application and the database,
-            enabling customers to perform a wide range of actions seamlessly</li>
-        <li>Focused on creating an intuitive user interface, ensuring easy navigation and accessibility for customers to access services
-            with features such as purchase history, transaction details, points redeemed and points earned, enhancing the overall user
-            experience.</li>
-    </ul>
-    <h3>Weather Station Using Beagle Bone Black</h3>
-    <ul>
-        <li>Developed a weather Station utilizing the Beagle Bone Black as a core component. This project involved programming in C and
-            implementing a Linux operating system with a PREEMT-RT kernel for real-time operations.</li>
-        <li>The system utilized BMP180(temperature and humidity) and BME280(pressure) sensors for data acquisition and a 16X02
-            character LCD for output display.</li>
-        <li>Conducted extensive unit and implementation testing of the sensors to ensure system accuracy and reliability.</li>
-        <li>This hands-on experience honed skills in hardware-software integration, real-time system design, and environmental data
-            analysis.</li>
-    </ul>
-    <h3>Customer Churn Prediction Using Machine Learning using Python.</h3>
-    <ul>
-        <li>Graduate project with a team of two for developing a customer churn prediction model using different machine learning models
-            and ensemble techniques on dataset containing more than 100 attributes and 100k instances.</li>
-        <li>Implemented advanced data cleaning, preprocessing, and feature selection techniques, optimizing machine learning models
-            (Random Forest, Decision Tree, XG-Boost). Achieved a 12% increase in prediction accuracy using a stacking ensemble approach</li>
-        <li>Emphasized the importance of continuous model monitoring, fine-tuning, and feature engineering for ongoing
-            improvements in prediction.</li>
-    </ul>
-    <h3>Enterprise Software Architecture & Implementation using UML:</h3>
-    <ul>
-        <li>Led a graduate project that simulated the responsibilities of a VP of IT, specializing in enterprise software solutions.</li>
-        <li>Designed comprehensive system diagrams, advocated for a hybrid layered architecture featuring an API Gateway, and
-            strengthened software security and interoperability strategies, while also investigating architecturally significant
-            requirements tailored to the demands of large-scale organizations.</li>
+    <title>Student Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #a9a3a3;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #3396a7;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="date"] {
+            width: 50%;
+        }
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Survey Form</h1>
+    <form action="#" method="post">
+        <label for="first_name">First Name *</label><br>
+        <input type="text" id="first_name" name="first_name" required><br>
 
-    </ul>
-    <h3>Monitoring Covid-19 Social Distancing with Person Detection and Tracking using Python.</h3>
-    <ul>
-        <li>Collaborated with a team of four members to implement an efficient real-time deep learning framework, employing YOLO v3 and
-            DEEP Sort methodologies.</li>
-        <li>Automating the monitoring of social distancing by employing a framework that utilizes the YOLO v3 object detection model to
-            segregate humans from the background and Deep sort approach to track the identified people with the help of bounding boxes
-            and assigned IDs.</li>
-    </ul>
-    <h3>Multi-CDN: Towards Privacy in Content Delivery Network using Java.</h3>
-    <ul>
-        <li>Partnered with four team members to deploy a privacy focused CDN system using encryption, shielding user preferences and
-            content popularity from potential data leaks, bolstering online privacy.</li>
-        <li>Engineered an innovative solution by blending Searchable Encryption (SE) with multi-CDN strategies, ensuring data
-            confidentiality while maintaining system efficiency.</li>
-        <li>Delivered a practical prototype that advances online content delivery security while optimizing performance.</li>
-    </ul>
-    <hr>
-    <h2>Skills & Certifications</h2>
-    <h3>TECHNICAL SKILLS:</h3>
-    <ul>
-        <li>Programming Languages: C, C++, Java, Python</li>
-        <li>DBMS Packages: MySQL, RDMS</li>
-        <li>Web Designing: HTML, XML, CSS</li>
-        <li>Data Mining, Data analysis, Data visualization,
-            Tableau, Machine learning</li>
-    </ul>
-    <h3>Online Courses and Certifications:</h3>
-    <ul>
-        <li>Data Analytics Essentials by Cisco</li>
-        <li>Cloud Security at IEEE</li>
-        <li>Data Security in the Cloud at IEEE</li>
-        <li>Ensuring Data Protection and Data Safety at IEEE.</li>
-        <li>Cryptography Fundamentals at IEEE</li>
-        <li>C language at IIT BOMBAY</li>
-        <li>Chat-GPT Prompt Engineering</li>
-    </ul>
-    <hr>
-    <footer>
-        <a href="./contact.html">Contact Me</a>
-        <p> © 2023 jashwanth Raj Gowlikar</p>
-      </footer>
-  </body>
+        <label for="last_name">Last Name *</label><br>
+        <input type="text" id="last_name" name="last_name" required><br>
+
+        <label for="street_address">Street Address *</label><br>
+        <input type="text" id="street_address" name="street_address" required><br>
+
+        <label for="city">City *</label><br>
+        <input type="text" id="city" name="city" required><br>
+
+        <label for="state">State *</label><br>
+        <input type="text" id="state" name="state" required><br>
+
+        <label for="zip">Zip *</label><br>
+        <input type="text" id="zip" name="zip" required><br>
+
+        <label for="telephone">Telephone Number *</label><br>
+        <input type="tel" id="telephone" name="telephone" required><br>
+
+        <label for="email">Email *</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="date_of_survey">Date of Survey *</label><br>
+        <input type="date" id="date_of_survey" name="date_of_survey" required><br>
+
+        <label>What did you like most about the campus? </label><br>
+        <input type="checkbox" id="like_students" name="like_students">Students<br>
+        <input type="checkbox" id="like_location" name="like_location">Location<br>
+        <input type="checkbox" id="like_campus" name="like_campus">Campus<br>
+        <input type="checkbox" id="like_atmosphere" name="like_atmosphere">Atmosphere<br>
+        <input type="checkbox" id="like_dorm_rooms" name="like_dorm_rooms">Dorm Rooms<br>
+        <input type="checkbox" id="like_sports" name="like_sports">Sports<br>
+
+        <label>How did you become interested in the university? </label><br>
+        <input type="radio" id="interest_friends" name="interest" value="friends">Friends<br>
+        <input type="radio" id="interest_television" name="interest" value="television">Television<br>
+        <input type="radio" id="interest_internet" name="interest" value="internet">Internet<br>
+        <input type="radio" id="interest_other" name="interest" value="other">Other<br>
+
+        <label for="recommend_likelihood">Likelihood of recommending this school </label><br>
+        <select id="recommend_likelihood" name="recommend_likelihood">
+            <option value="Very Likely">Very Likely</option>
+            <option value="Likely">Likely</option>
+            <option value="Unlikely">Unlikely</option>
+        </select><br>
+
+        <label for="raffle">Raffle (Enter at least ten comma separated numbers ranging from 1 through 100) </label><br>
+        <input type="text" id="raffle" name="raffle" required><br>
+
+        <label for="additional_comments">Additional Comments</label><br>
+        <textarea id="additional_comments" name="additional_comments" rows="4" cols="50"></textarea><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Cancel">
+    </form>
+</body>
 </html>
