@@ -65,63 +65,157 @@
 </head>
 <body>
     <h1>Student Survey Form</h1>
-    <form action="#" method="post">
-        <label for="first_name">First Name *</label><br>
-        <input type="text" id="first_name" name="first_name" required><br>
-
-        <label for="last_name">Last Name *</label><br>
-        <input type="text" id="last_name" name="last_name" required><br>
-
-        <label for="street_address">Street Address *</label><br>
-        <input type="text" id="street_address" name="street_address" required><br>
-
-        <label for="city">City *</label><br>
-        <input type="text" id="city" name="city" required><br>
-
-        <label for="state">State *</label><br>
-        <input type="text" id="state" name="state" required><br>
-
-        <label for="zip">Zip *</label><br>
-        <input type="text" id="zip" name="zip" required><br>
-
-        <label for="telephone">Telephone Number *</label><br>
-        <input type="tel" id="telephone" name="telephone" required><br>
-
-        <label for="email">Email *</label><br>
-        <input type="email" id="email" name="email" required><br>
-
-        <label for="date_of_survey">Date of Survey *</label><br>
-        <input type="date" id="date_of_survey" name="date_of_survey" required><br>
-
-        <label>What did you like most about the campus? </label><br>
-        <input type="checkbox" id="like_students" name="like_students">Students<br>
-        <input type="checkbox" id="like_location" name="like_location">Location<br>
-        <input type="checkbox" id="like_campus" name="like_campus">Campus<br>
-        <input type="checkbox" id="like_atmosphere" name="like_atmosphere">Atmosphere<br>
-        <input type="checkbox" id="like_dorm_rooms" name="like_dorm_rooms">Dorm Rooms<br>
-        <input type="checkbox" id="like_sports" name="like_sports">Sports<br>
-
-        <label>How did you become interested in the university? </label><br>
-        <input type="radio" id="interest_friends" name="interest" value="friends">Friends<br>
-        <input type="radio" id="interest_television" name="interest" value="television">Television<br>
-        <input type="radio" id="interest_internet" name="interest" value="internet">Internet<br>
-        <input type="radio" id="interest_other" name="interest" value="other">Other<br>
-
-        <label for="recommend_likelihood">Likelihood of recommending this school </label><br>
-        <select id="recommend_likelihood" name="recommend_likelihood">
-            <option value="Very Likely">Very Likely</option>
-            <option value="Likely">Likely</option>
-            <option value="Unlikely">Unlikely</option>
-        </select><br>
-
-        <label for="raffle">Raffle (Enter at least ten comma separated numbers ranging from 1 through 100) </label><br>
-        <input type="text" id="raffle" name="raffle" required><br>
-
-        <label for="additional_comments">Additional Comments</label><br>
-        <textarea id="additional_comments" name="additional_comments" rows="4" cols="50"></textarea><br>
-
-        <input type="submit" value="Submit">
-        <input type="reset" value="Cancel">
-    </form>
+    <form id="form">
+        <label for="first_name">First Name *</label><br />
+        <input type="text" id="first_name" name="firstName" required /><br />
+  
+        <label for="last_name">Last Name *</label><br />
+        <input type="text" id="last_name" name="lastName" required /><br />
+  
+        <label for="street_address">Street Address *</label><br />
+        <input
+          type="text"
+          id="street_address"
+          name="streetAddress"
+          required
+        /><br />
+  
+        <label for="city">City *</label><br />
+        <input type="text" id="city" name="city" required /><br />
+  
+        <label for="state">State *</label><br />
+        <input type="text" id="state" name="state" required /><br />
+  
+        <label for="zip">Zip *</label><br />
+        <input type="text" id="zip" name="zip" required /><br />
+  
+        <label for="telephone">Telephone Number *</label><br />
+        <input type="tel" id="telephone" name="telephone" required /><br />
+  
+        <label for="email">Email *</label><br />
+        <input type="email" id="email" name="email" required /><br />
+  
+        <label for="date_of_survey">Date of Survey *</label><br />
+        <input
+          type="date"
+          id="date_of_survey"
+          name="dateOfSurvey"
+          required
+        /><br />
+  
+        <label>What did you like most about the campus? </label><br />
+        <input
+          type="checkbox"
+          id="like_students"
+          name="likes"
+          ,
+          value="Students"
+        />Students<br />
+        <input
+          type="checkbox"
+          id="like_location"
+          name="likes"
+          value="Location"
+        />Location<br />
+        <input
+          type="checkbox"
+          id="likes"
+          name="likes"
+          value="Campus"
+        />Campus<br />
+        <input
+          type="checkbox"
+          id="like_atmosphere"
+          name="likes"
+          value="Atmosphere"
+        />Atmosphere<br />
+        <input
+          type="checkbox"
+          id="like_dorm_rooms"
+          name="likes"
+          value="Dorm"
+        />Dorm Rooms<br />
+        <input
+          type="checkbox"
+          id="like_sports"
+          name="likes"
+          value="Sports"
+        />Sports<br />
+  
+        <label>How did you become interested in the university? </label><br />
+        <input
+          type="radio"
+          id="interest_friends"
+          name="interestSource"
+          value="friends"
+        />Friends<br />
+        <input
+          type="radio"
+          id="interest_television"
+          name="interestSource"
+          value="television"
+        />Television<br />
+        <input
+          type="radio"
+          id="interest_internet"
+          name="interestSource"
+          value="internet"
+        />Internet<br />
+        <input
+          type="radio"
+          id="interest_other"
+          name="interestSource"
+          value="other"
+        />Other<br />
+  
+        <label for="recommend_likelihood"
+          >Likelihood of recommending this school </label
+        ><br />
+        <select id="recommend_likelihood" name="recommendationLikelihood">
+          <option value="Very Likely">Very Likely</option>
+          <option value="Likely">Likely</option>
+          <option value="Unlikely">Unlikely</option></select
+        ><br />
+        <input type="submit" value="submit"></button>
+        <input type="reset" value="Cancel" />
+      </form>
+    </body>
+    <script>
+      const form = document.getElementById("form");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const payload = new FormData(form);
+        const data = {};
+        data['likes'] = [];
+      payload.forEach((value, key) => {
+          if (key === 'likes') {
+              data['likes'].push(value);
+          } else {
+              data[key] = value;  // Handle other data normally
+          }
+      });
+  
+      // Convert the array of 'likes' into a single comma-separated string
+      if (data['likes'].length) {
+          data['likes'] = data['likes'].join(', ');
+      } else {
+          delete data['likes'];  // Remove the key if no checkboxes were checked
+      }
+  
+         console.log(data);
+        fetch("http://54.147.244.147:31584/api/students", {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((res) => res.json())
+          .then((data) => console.log(data))
+          .catch((err) => console.log(err));
+      });
+    </script>
+  </html>
+  
 </body>
 </html>
