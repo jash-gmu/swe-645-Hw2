@@ -1,4 +1,7 @@
 Containerized Web Application Deployment and CI/CD Pipeline Implementation
+
+
+
 Team mates :
 Jashwanth Raj Gowlikar(G01356160)
 1.Steps to create a docker image and push it to docker hub:
